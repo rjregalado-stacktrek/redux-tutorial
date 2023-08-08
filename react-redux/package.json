@@ -1,9 +1,8 @@
 {
-  "name": "redux_tutorial",
+  "name": "react-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,6 +14,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "server": "json-server -p3001 --watch db.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "deep-freeze": "^0.0.1"
+    "json-server": "^0.17.3"
   }
 }

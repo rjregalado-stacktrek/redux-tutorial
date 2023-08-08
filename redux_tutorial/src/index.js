@@ -7,6 +7,24 @@ import ReactDOM from 'react-dom/client'
 import { createStore } from 'redux'
 //import { configureStore } from '@reduxjs/toolkit'
 
+// const action = {
+//   type:"INCREMENT"
+// }
+
+// const counterReducer = (state=0, action) => {
+//   if (action.type === 'INCREMENT') {
+//     return state + 1
+//   } else if (action.type === 'DECREMENT') {
+//     return state - 1
+//   } else if (action.type === 'ZERO') {
+//     return 0
+//   }
+
+//   return state
+// }
+
+// USING SWITCH STATEMENT - the most common approach in writing a reducer.
+
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case 'INCREMENT':
@@ -15,36 +33,22 @@ const counterReducer = (state = 0, action) => {
       return state - 1
     case 'ZERO':
       return 0
-    default:
+    default: // if none of the above matches, code comes here
       return state
   }
 }
-// USING SWITCH STATEMENT - the most common approach in writing a reducer.
-
-// const counterReducer = (state = 0, action) => {
-//   switch (action.type) {
-//     case 'INCREMENT':
-//       return state + 1
-//     case 'DECREMENT':
-//       return state - 1
-//     case 'ZERO':
-//       return 0
-//     default: // if none of the above matches, code comes here
-//       return state
-//   }
-// }
-
-// const store = createStore(counterReducer)
-// console.log(store.getState()) //https://redux.js.org/api/store#getstate
-// store.dispatch({ type: 'INCREMENT' }) //https://redux.js.org/api/store#dispatchaction
-// store.dispatch({ type: 'INCREMENT' })
-// store.dispatch({ type: 'INCREMENT' })
-// console.log(store.getState())
-// store.dispatch({ type: 'ZERO' })
-// store.dispatch({ type: 'DECREMENT' })
-// console.log(store.getState())
 
 const store = createStore(counterReducer)
+console.log(store.getState()) //https://redux.js.org/api/store#getstate // 0
+store.dispatch({ type: 'INCREMENT' }) //https://redux.js.org/api/store#dispatchaction
+store.dispatch({ type: 'INCREMENT' })
+store.dispatch({ type: 'INCREMENT' })
+console.log(store.getState()) // 3
+store.dispatch({ type: 'ZERO' })
+store.dispatch({ type: 'DECREMENT' })
+console.log(store.getState()) // -1
+
+//const store = createStore(counterReducer)
 //const store = configureStore(counterReducer)
 
 const App = () => {
