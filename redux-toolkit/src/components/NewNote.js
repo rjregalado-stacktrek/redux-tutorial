@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux'
 import { createNote } from '../reducers/noteReducer'
 
 const NewNote = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch() //instance
 
   const addNote = async (event) => {
     event.preventDefault()

@@ -39,14 +39,17 @@ const counterReducer = (state = 0, action) => {
 }
 
 const store = createStore(counterReducer)
-console.log(store.getState()) //https://redux.js.org/api/store#getstate // 0
-store.dispatch({ type: 'INCREMENT' }) //https://redux.js.org/api/store#dispatchaction
-store.dispatch({ type: 'INCREMENT' })
-store.dispatch({ type: 'INCREMENT' })
-console.log(store.getState()) // 3
-store.dispatch({ type: 'ZERO' })
-store.dispatch({ type: 'DECREMENT' })
-console.log(store.getState()) // -1
+// console.log(store.getState()) //https://redux.js.org/api/store#getstate // 0
+// store.dispatch({ type: 'INCREMENT' }) //https://redux.js.org/api/store#dispatchaction
+// store.dispatch({ type: 'INCREMENT' })
+// store.dispatch({ type: 'INCREMENT' })
+// store.dispatch({ type: 'DECREMENT' })
+// console.log(store.getState()) // 2
+// store.dispatch({ type: 'ZERO' }) //0
+// store.dispatch({ type: 'DECREMENT' })
+// store.dispatch({ type: 'DECREMENT' })
+// store.dispatch({ type: 'DECREMENT' })
+// console.log(store.getState()) // -3
 
 //const store = createStore(counterReducer)
 //const store = configureStore(counterReducer)

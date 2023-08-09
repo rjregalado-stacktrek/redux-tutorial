@@ -13,10 +13,10 @@ const Note = ({ note, handleClick }) => {
 const Notes = () => {
   const dispatch = useDispatch()
   const notes = useSelector(state => {
-    if ( state.filter === 'ALL' ) {
+    if ( state.filter === 'ALL' ) { // Single qoute
       return state.notes
     }
-    return state.filter  === 'IMPORTANT' 
+    return state.filter  === 'IMPORTANT' // Single qoute 
       ? state.notes.filter(note => note.important)
       : state.notes.filter(note => !note.important)
   })
